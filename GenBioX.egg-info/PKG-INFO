@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: GenBioX
-Version: 0.1
+Version: 0.2
 Summary: A package for Genome Analysis
-Home-page: https://github.com/SayaGarud/ResistomeX.git
+Home-page: https://github.com/SayaGarud/GenBioX.git
 Author: Sayali Garud
 Author-email: sayaligrud@gmail.com
 License: MIT
@@ -15,3 +15,5 @@ Classifier: Programming Language :: Python :: 3.8
 Classifier: Programming Language :: Python :: 3.9
 Classifier: Intended Audience :: Science/Research
 Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+
+For documentation, please visit http://genbiox.readthedocs.io/
