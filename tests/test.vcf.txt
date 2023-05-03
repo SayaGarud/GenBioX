@@ -1,0 +1,9 @@
+##fileformat=VCFv4.2
+##FILTER=<ID=PASS,Description="All filters passed">
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Depth of coverage">
+##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of Samples With Data">
+##contig=<ID=NC_000962.3,length=4411532>
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	sample1	sample2
+NC_000962.3	135	dot	.	G	.	PASS	NS=2	GT:DP	0/1:8	1/1:12
+NC_000962.3	148	dot	.	T	.	PASS	NS=2	GT:DP	0/0:5	0/1:9
