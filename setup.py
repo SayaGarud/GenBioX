@@ -6,13 +6,14 @@ setup(
     packages=find_packages(),
     license='MIT',
     description='A package for Genome Analysis',
+     long_description='''For documentation, please visit http://genbiox.readthedocs.io/''',
     install_requires=[
         'pandas>=1.3.0',
         'numpy>=1.21.1',
         'Biopython>=1.79',
         'scikit-allel>=1.3.2'
     ],
-    url='https://github.com/SayaGarud/ResistomeX.git',
+    url='https://github.com/SayaGarud/GenBioX.git',
     author='Sayali Garud',
     author_email='sayaligrud@gmail.com',
     classifiers=[
