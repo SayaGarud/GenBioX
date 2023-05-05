@@ -1,3 +1,5 @@
+LICENSE.txt
+README.md
 setup.py
 GenBioX/__init__.py
 GenBioX.egg-info/PKG-INFO
@@ -10,15 +12,14 @@ GenBioX/alignment/align.py
 GenBioX/alignment/evaluate_alignment_quality.py
 GenBioX/alignment/extract_conserved_regions.py
 GenBioX/alignment/merge_alignments.py
+GenBioX/alignment/pairwise_alignment.py
 GenBioX/alignment/read_alignment.py
 GenBioX/annotation/__init__.py
-GenBioX/annotation/annotation.py
-GenBioX/annotation/ap_qualityCheck.py
 GenBioX/annotation/extract_annotations.py
+GenBioX/annotation/extract_locations.py
 GenBioX/annotation/filter_annotations.py
 GenBioX/annotation/search_annotations.py
-GenBioX/annotation/test_annotation.py
-GenBioX/annotation/test_annotation_processing.py
+GenBioX/annotation/visualize_annotations.py
 GenBioX/comparative_genomics/__init__.py
 GenBioX/comparative_genomics/compare_genome_size.py
 GenBioX/comparative_genomics/identify_conserved_regions.py
@@ -44,6 +45,8 @@ GenBioX/gene_expression/differential_gene_expression_analysis.py
 GenBioX/gene_expression/gene_expression_correlation.py
 GenBioX/gene_expression/gene_expression_normalization.py
 GenBioX/gene_expression/gene_expression_quantification.py
+GenBioX/gene_expression/get_group_labels.py
+GenBioX/gene_expression/read_gene_expression_file.py
 GenBioX/statistical_analysis/__init__.py
 GenBioX/statistical_analysis/calculate_gc_content.py
 GenBioX/statistical_analysis/count_nucleotides.py

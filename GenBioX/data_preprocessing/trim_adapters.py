@@ -1,19 +1,12 @@
-def trim_adapters(sequence, adapter='AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC'):
+def trim_adapters(seq_list, adapter):
     """
-    Trims adapter sequences from the 3' end of a FASTA sequence.
-    Returns the trimmed sequence.
+    Removes adapter sequences from the 3' end of the nucleotide sequence(s) in seq_list.
     """
-    try:
-        # Find the index of the adapter sequence in the reverse complement of the sequence
-        rev_comp = sequence[::-1].translate(str.maketrans('ATCG', 'TAGC'))
-        adapter_idx = rev_comp.find(adapter[::-1])
-        if adapter_idx == -1:
-            # If adapter sequence is not found, return the original sequence
-            return sequence
+    trimmed_seqs = []
+    for seq in seq_list:
+        index = seq.rfind(adapter)
+        if index != -1:
+            trimmed_seqs.append(seq[:index])
         else:
-            # Trim the adapter sequence from the 3' end of the sequence
-            trimmed_sequence = sequence[:-adapter_idx-1]
-            return trimmed_sequence
-    except TypeError:
-        # If the input sequence is not a string or is empty, return None
-        return None
+            trimmed_seqs.append(seq)
+    return trimmed_seqs

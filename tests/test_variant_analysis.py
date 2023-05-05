@@ -1,1 +1,0 @@
-from GenBioX import variant_analysis

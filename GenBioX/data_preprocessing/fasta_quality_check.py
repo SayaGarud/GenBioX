@@ -1,29 +1,31 @@
-def fasta_quality_check(sequences, min_length=50, max_length=1000000):
-    """
-    Filters sequences by length and removes any sequence with invalid characters.
-    Returns a dictionary of filtered sequences.
+def fasta_quality_check(nucleotides_list, quality_scores=None, min_quality_score=20):
+    results = {}
+    
+    for i, nucleotides in enumerate(nucleotides_list):
+        seq_id = f'Sequence_{i+1}'
+        # Calculate length of sequence
+        seq_length = len(nucleotides)
+        # Calculate nucleotide counts
+        counts = {'A': 0, 'C': 0, 'G': 0, 'T': 0}
+        for nt in nucleotides:
+            counts[nt] += 1
+        
+        # Calculate GC content
+        gc_content = (counts['G'] + counts['C']) / sum(counts.values())
 
-    Args:
-        sequences (dict): A dictionary of sequence IDs and their corresponding sequences.
-        min_length (int): Minimum length of sequence (default 50).
-        max_length (int): Maximum length of sequence (default 1000000).
-
-    Returns:
-        dict: A dictionary with sequence IDs as keys and filtered sequences as values.
-    """
-
-    filtered_sequences = {}
-    valid_chars = set('ATCGatcgNn')
-
-    for seq_id, seq in sequences.items():
-        # Filter out sequences based on length
-        if len(seq) < min_length or len(seq) > max_length:
-            continue
-
-        # Filter out sequences with invalid characters
-        if not all(c in valid_chars for c in seq):
-            continue
-
-        filtered_sequences[seq_id] = seq
-
-    return filtered_sequences
+        # Check quality scores if available
+        if quality_scores:
+            scores = quality_scores[i]
+            if any(int(x) < min_quality_score for x in scores.split()):
+                results[seq_id] = 'Sequence has low quality'
+                continue
+        
+        # Add results to dictionary
+        results[seq_id] = {
+            'length': seq_length,
+            'nucleotide_counts': counts,
+            'GC_content': gc_content,
+            'status': 'Passes quality check'
+        }
+        
+    return results

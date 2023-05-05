@@ -2,11 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name='GenBioX',
-    version='0.2',
+    version='0.3.1',
     packages=find_packages(),
     license='MIT',
-    description='A package for Genome Analysis',
-     long_description='''For documentation, please visit http://genbiox.readthedocs.io/''',
+    description='A Comprehensive Bioinformatics Package for Genome Analysis',
+    long_description='''For documentation, please visit http://genbiox.readthedocs.io/''',
+    keywords=['bioinformatics', 'genomics', 'genome analysis', 'quality control', 'preprocessing',  'sequencing', 'annotation','variant analysis', 'gene expression', 'comparative genomics'],
     install_requires=[
         'pandas>=1.3.0',
         'numpy>=1.21.1',
