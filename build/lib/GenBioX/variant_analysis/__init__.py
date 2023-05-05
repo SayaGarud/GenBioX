@@ -1,5 +1,0 @@
-from .phenotype_prediction import phenotype_prediction
-from .splice_site_prediction import splice_site_prediction
-from .variant_annotation import variant_annotation
-from .variant_calling import variant_calling
-from .variant_effect_prediction import variant_effect_prediction
