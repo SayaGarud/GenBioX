@@ -14,8 +14,6 @@ Usage:
 
 .. code-block:: python
 
-    import GenBioX.data_preprocessing as dp
-
     # Load sequencing data
     seq = dp.read_fasta("sequencing_data.fasta")
 
@@ -63,11 +61,11 @@ Usage:
 .. code-block:: python
 
     # Load data
-    data = dp.fasta_quality_check(sequences, min_length=50, max_length=1000000)
-    print(data)
+   qc = dp.fasta_quality_check(seq)
+   print(qc)
 
 
-filter_low_quality_reads
+filter_reads
 -------------------------
 
 Remove reads with low overall quality scores or with too many low-quality bases.
@@ -77,8 +75,8 @@ Usage:
 .. code-block:: python
 
     # Load data
-    data = dp.filter_low_quality_reads(quality_scores, min_avg_score=20, max_low_quality_bases=5)
-    print(data)
+    filtered_data = dp.filter_reads(quality_scores, min_avg_score=20, max_low_quality_bases=5)
+    print(filtered_data)
 
 
 quality_scores
@@ -91,8 +89,8 @@ Usage:
 .. code-block:: python
 
     # Load data
-    data = dp.quality_scores(seq)
-    print(data)
+    score = dp.quality_scores(seq)
+    print(score)
 
 
 trim_adapters

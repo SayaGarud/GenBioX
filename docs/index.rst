@@ -1,7 +1,14 @@
 .. GenBioX documentation master file, created by
-   sphinx-quickstart on Wed May  3 12:20:30 2023.
+   sphinx-quickstart on Sat May  6 14:07:00 2023.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
+
+
+.. image:: logo.png
+   :height: 150px
+   :width: 400px
+   :class: logo-img
+   :align: left
 
 Welcome to GenBioX!
 ===================================
@@ -23,7 +30,7 @@ To install GenBioX, you can use pip:
    pip install GenBioX
 
 Getting started
----------------
+----------------
 
 To use GenBioX, start by importing it:
 
@@ -74,7 +81,15 @@ This will give output:
    gene_expression
    comparative_genomics
 
-
+.. raw:: html
+   
+   <style>
+   .logo-img {
+       display: inline-block;
+       vertical-align: middle;
+       margin-right: 10px;
+   }
+   </style>
 
 Indices and tables
 ==================
@@ -82,3 +97,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+

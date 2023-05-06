@@ -1,7 +1,19 @@
 gene expression 
 =================
 
-performs Analysis of gene expression and differential gene expression in relation to genetic variants and disease phenotypes
+performs gene expression analysis 
+
+read_gene_expression_file
+-----------------------------
+
+reading gene expression file and converting it into dataframe for further analysis 
+
+Usage:
+
+.. code-block:: python
+
+    expression_data = ge.read_gene_expression_file('mouseretina.txt')
+    print(expression_data)
 
 
 gene_expression_normalization
@@ -9,21 +21,29 @@ gene_expression_normalization
 
 This function normalizes raw gene expression data to remove technical variations and biases, which can affect downstream analysis.
 
+Usage:
+
+.. code-block:: python
+    
+    ge.gene_expression_normalization(expression_data, method='quantile')
+
+
+get_group_labels
+------------------
+
+Get Group Labels For differential_gene_expression_analysis
 
 Usage:
 
 .. code-block:: python
-
-    import GenBioX.gene_expression as ge
-
-    ge.gene_expression_normalization(data, method='quantile')
+    
+    group_labels = ge.get_group_labels(norm)
 
 
 differential_gene_expression_analysis
 -------------------------------------
 
-This function performs differential gene expression analysis to identify genes that are differentially expressed between two or more conditions or groups, such as healthy vs. diseased or wild-type vs. mutant.
-
+This function performs differential gene expression analysis to identify genes that are differentially expressed between two or more conditions or group_labels
 
 Usage:
 

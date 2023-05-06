@@ -31,6 +31,19 @@ Usage:
     a.read_alignment(reads, reference_genome)
 
 
+pairwise_alignment
+-------------------
+
+performs pairwise_alignment of two sequences 
+
+Usage:
+
+.. code-block:: python
+
+    a.pairwise_alignment("seq.fasta", "seq2.fasta")
+    
+
+
 merge_alignment
 -------------------
 
@@ -53,7 +66,8 @@ Usage:
 
 .. code-block:: python
 
-    a.evaluate_alignment_quality(aln)
+    aln_quality = a.evaluate_alignment_quality(alignment)
+    print(aln_quality)
 
 
 extract_conserved_regions
@@ -65,4 +79,5 @@ Usage:
 
 .. code-block:: python
 
-    a.extract_conserved_regions(aln)
+    conserved_regions = a.extract_conserved_regions(alignment)
+    print(conserved_regions)

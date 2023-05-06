@@ -35,7 +35,7 @@ Usage:
 variant_effect_prediction
 --------------------------
 
-Predicts the functional consequences of genetic variants using various tools such as SIFT, PolyPhen, and CADD.
+Predicts the functional consequences of genetic variants
 
 Usage:
 
@@ -47,7 +47,7 @@ Usage:
 splice_site_prediction
 -----------------------
 
-This function predicts the effect of variants on splicing by analyzing splice site sequences and motifs, which can help identify variants that may cause exon skipping or intron retention.
+predicts the effect of variants on splicing by analyzing splice site sequences and motifs
 
 Usage:
 
@@ -59,7 +59,7 @@ Usage:
 phenotype_prediction
 ---------------------
 
-predicts the effect of variants on phenotypes using various methods such as Mendelian randomization, polygenic risk scores, and machine learning models, which can help identify variants associated with specific diseases or traits.
+predicts the effect of variants on phenotypes 
 
 Usage:
 

@@ -65,7 +65,7 @@ Usage:
    print(qc)
 
 
-filter_low_quality_reads
+filter_reads
 -------------------------
 
 Remove reads with low overall quality scores or with too many low-quality bases.
@@ -75,7 +75,7 @@ Usage:
 .. code-block:: python
 
     # Load data
-    filtered_data = dp.filter_low_quality_reads(quality_scores, min_avg_score=20, max_low_quality_bases=5)
+    filtered_data = dp.filter_reads(quality_scores, min_avg_score=20, max_low_quality_bases=5)
     print(filtered_data)
 
 

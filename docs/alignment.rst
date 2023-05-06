@@ -41,8 +41,7 @@ Usage:
 .. code-block:: python
 
     a.pairwise_alignment("seq.fasta", "seq2.fasta")
-
-    a.pairwise_alignment("seq.fasta", "seq2.fasta", gap_penalty=-10, match_score=5, mismatch_penalty=-4)
+    
 
 
 merge_alignment
