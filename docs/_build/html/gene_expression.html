@@ -1,108 +1,48 @@
 <!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-<html lang="python">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
-
-    <title>gene expression &#8212; GenBioX 0.3.1 documentation</title>
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/sphinx_highlight.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>gene expression &mdash; GenBioX 0.3.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="comparative genomics" href="comparative_genomics.html" />
-    <link rel="prev" title="variant analysis" href="variant_analysis.html" />
-   
-  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+    <link rel="prev" title="variant analysis" href="variant_analysis.html" /> 
+</head>
 
-  </head><body>
-  
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
 
-    <div class="document">
-      <div class="documentwrapper">
-        <div class="bodywrapper">
           
-
-          <div class="body" role="main">
-            
-  <section id="gene-expression">
-<h1>gene expression<a class="headerlink" href="#gene-expression" title="Permalink to this heading">¶</a></h1>
-<p>performs gene expression analysis</p>
-<section id="read-gene-expression-file">
-<h2>read_gene_expression_file<a class="headerlink" href="#read-gene-expression-file" title="Permalink to this heading">¶</a></h2>
-<p>reading gene expression file and converting it into dataframe for further analysis</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">expression_data</span> <span class="o">=</span> <span class="n">ge</span><span class="o">.</span><span class="n">read_gene_expression_file</span><span class="p">(</span><span class="s1">&#39;mouseretina.txt&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">expression_data</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="gene-expression-normalization">
-<h2>gene_expression_normalization<a class="headerlink" href="#gene-expression-normalization" title="Permalink to this heading">¶</a></h2>
-<p>This function normalizes raw gene expression data to remove technical variations and biases, which can affect downstream analysis.</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_normalization</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;quantile&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="get-group-labels">
-<h2>get_group_labels<a class="headerlink" href="#get-group-labels" title="Permalink to this heading">¶</a></h2>
-<p>Get Group Labels For differential_gene_expression_analysis</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">group_labels</span> <span class="o">=</span> <span class="n">ge</span><span class="o">.</span><span class="n">get_group_labels</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="differential-gene-expression-analysis">
-<h2>differential_gene_expression_analysis<a class="headerlink" href="#differential-gene-expression-analysis" title="Permalink to this heading">¶</a></h2>
-<p>This function performs differential gene expression analysis to identify genes that are differentially expressed between two or more conditions or group_labels</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">differential_gene_expression_analysis</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">group_labels</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="gene-expression-quantification">
-<h2>gene_expression_quantification<a class="headerlink" href="#gene-expression-quantification" title="Permalink to this heading">¶</a></h2>
-<p>This function quantifies gene expression levels using various methods such as RPKM, TPM, or FPKM, which can be used as input for downstream analysis.</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_quantification</span><span class="p">(</span><span class="n">counts_matrix</span><span class="p">,</span> <span class="n">lengths</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-<section id="gene-expression-correlation">
-<h2>gene_expression_correlation<a class="headerlink" href="#gene-expression-correlation" title="Permalink to this heading">¶</a></h2>
-<p>This function calculates the correlation between gene expression levels and various phenotypic or clinical variables, such as disease status, age, or gender, which can help identify potential biomarkers or therapeutic targets.</p>
-<p>Usage:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_correlation</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">clinical_data</span><span class="p">)</span>
-</pre></div>
-</div>
-</section>
-</section>
-
-
-          </div>
           
-        </div>
-      </div>
-      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">GenBioX</a></h1>
-
-
-
-
-
-
-
-
-<h3>Navigation</h3>
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+          <a href="index.html" class="icon icon-home">
+            GenBioX
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="data_preprocessing.html">Data Preprocessing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="statistical_analysis.html">Statistical Analysis</a></li>
@@ -121,51 +61,113 @@
 <li class="toctree-l1"><a class="reference internal" href="comparative_genomics.html">comparative genomics</a></li>
 </ul>
 
-<div class="relations">
-<h3>Related Topics</h3>
-<ul>
-  <li><a href="index.html">Documentation overview</a><ul>
-      <li>Previous: <a href="variant_analysis.html" title="previous chapter">variant analysis</a></li>
-      <li>Next: <a href="comparative_genomics.html" title="next chapter">comparative genomics</a></li>
-  </ul></li>
-</ul>
-</div>
-<div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
-    <div class="searchformwrapper">
-    <form class="search" action="search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
-    </form>
-    </div>
-</div>
-<script>document.getElementById('searchbox').style.display = "block"</script>
-
-
-
-
-
-
-
-
         </div>
       </div>
-      <div class="clearer"></div>
-    </div>
-    <div class="footer">
-      &copy;2023, Sayali Garud.
-      
-      |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.0.0</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
-      
-      |
-      <a href="_sources/gene_expression.rst.txt"
-          rel="nofollow">Page source</a>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">GenBioX</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">gene expression</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/gene_expression.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gene-expression">
+<h1>gene expression<a class="headerlink" href="#gene-expression" title="Permalink to this heading"></a></h1>
+<p>performs gene expression analysis</p>
+<section id="read-gene-expression-file">
+<h2>read_gene_expression_file<a class="headerlink" href="#read-gene-expression-file" title="Permalink to this heading"></a></h2>
+<p>reading gene expression file and converting it into dataframe for further analysis</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">expression_data</span> <span class="o">=</span> <span class="n">ge</span><span class="o">.</span><span class="n">read_gene_expression_file</span><span class="p">(</span><span class="s1">&#39;mouseretina.txt&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">expression_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gene-expression-normalization">
+<h2>gene_expression_normalization<a class="headerlink" href="#gene-expression-normalization" title="Permalink to this heading"></a></h2>
+<p>This function normalizes raw gene expression data to remove technical variations and biases, which can affect downstream analysis.</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_normalization</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;quantile&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="get-group-labels">
+<h2>get_group_labels<a class="headerlink" href="#get-group-labels" title="Permalink to this heading"></a></h2>
+<p>Get Group Labels For differential_gene_expression_analysis</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">group_labels</span> <span class="o">=</span> <span class="n">ge</span><span class="o">.</span><span class="n">get_group_labels</span><span class="p">(</span><span class="n">norm</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="differential-gene-expression-analysis">
+<h2>differential_gene_expression_analysis<a class="headerlink" href="#differential-gene-expression-analysis" title="Permalink to this heading"></a></h2>
+<p>This function performs differential gene expression analysis to identify genes that are differentially expressed between two or more conditions or group_labels</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">differential_gene_expression_analysis</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">group_labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gene-expression-quantification">
+<h2>gene_expression_quantification<a class="headerlink" href="#gene-expression-quantification" title="Permalink to this heading"></a></h2>
+<p>This function quantifies gene expression levels using various methods such as RPKM, TPM, or FPKM, which can be used as input for downstream analysis.</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_quantification</span><span class="p">(</span><span class="n">counts_matrix</span><span class="p">,</span> <span class="n">lengths</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="gene-expression-correlation">
+<h2>gene_expression_correlation<a class="headerlink" href="#gene-expression-correlation" title="Permalink to this heading"></a></h2>
+<p>This function calculates the correlation between gene expression levels and various phenotypic or clinical variables, such as disease status, age, or gender, which can help identify potential biomarkers or therapeutic targets.</p>
+<p>Usage:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ge</span><span class="o">.</span><span class="n">gene_expression_correlation</span><span class="p">(</span><span class="n">expression_data</span><span class="p">,</span> <span class="n">clinical_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="variant_analysis.html" class="btn btn-neutral float-left" title="variant analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="comparative_genomics.html" class="btn btn-neutral float-right" title="comparative genomics" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
-    
+  <hr/>
 
-    
-  </body>
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Sayali Garud.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
 </html>

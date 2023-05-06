@@ -5,16 +5,26 @@
 
 
 .. image:: logo.png
-   :height: 150px
+   :height: 170px
    :width: 400px
    :class: logo-img
-   :align: left
+   :align: center
+
+.. raw:: html
+
+   <div style="height: 50px;"></div>
+
+
+
 
 Welcome to GenBioX!
-===================================
-
+=======================
+   
+   
 A Comprehensive Bioinformatics package for genome analysis.
- 
+
+
+
 The purpose of this package is to provide a set of tools and functionalities to perform a wide range of genome analysis tasks, including loading, quality control, preprocessing, and alignment of sequencing data.
 It also includes tools to extract and filter annotations from GenBank files, perform sequence annotation, predict the functional effects of genetic variants, analyse gene expression and differential gene expression, and perform comparative genomics. 
 The package provides visualisation tools to interpret the results of the analysis.
@@ -81,15 +91,6 @@ This will give output:
    gene_expression
    comparative_genomics
 
-.. raw:: html
-   
-   <style>
-   .logo-img {
-       display: inline-block;
-       vertical-align: middle;
-       margin-right: 10px;
-   }
-   </style>
 
 Indices and tables
 ==================
